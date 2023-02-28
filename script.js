@@ -1,17 +1,35 @@
-let salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130,
-}
+// before the call
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
 
-// Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
+multiplyNumeric(menu);
 
-// If salaries is empty, then the result must be 0.
+// after the call
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+};
 
-let sum = 0;
+// function multiplyNumeric(obj) {
   
-for (let key in salaries) {
-  sum += salaries[key];
-}
+//   // loop thru all property values
+//   for (let key in menu) {
+    
+//   //check if values are numbers with typeOf    
+//   //replace the variable with the number*2
+//     typeof key == 'number' ? key = key*2 : key = key;
+//   }
+  
+// }
 
-alert(sum);
+function multiplyNumeric(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == 'number') {
+      obj[key] *= 2;
+    }
+  }
+}
